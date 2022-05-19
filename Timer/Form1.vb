@@ -169,6 +169,7 @@
             MsgBox("計時秒鐘設定錯誤>59", vbCritical)
             GOS.Text = "0"
         Else
+            GOH.Text = "0" : GOM.Text = "0" : GOS.Text = "0"
             blnTimerWork = True
             btnChancel.Text = "停止"
             btnChancel.BackColor = Color.Red
