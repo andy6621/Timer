@@ -64,6 +64,8 @@ Partial Class Form1
         '
         'btnStart
         '
+        Me.btnStart.Font = New System.Drawing.Font("微軟正黑體", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.btnStart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnStart.Location = New System.Drawing.Point(339, 69)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(75, 46)
@@ -73,6 +75,8 @@ Partial Class Form1
         '
         'btnExit
         '
+        Me.btnExit.Font = New System.Drawing.Font("微軟正黑體", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnExit.Location = New System.Drawing.Point(339, 208)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 52)
@@ -82,77 +86,86 @@ Partial Class Form1
         '
         'btnChancel
         '
+        Me.btnChancel.Font = New System.Drawing.Font("微軟正黑體", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.btnChancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnChancel.Location = New System.Drawing.Point(339, 136)
         Me.btnChancel.Name = "btnChancel"
         Me.btnChancel.Size = New System.Drawing.Size(75, 52)
         Me.btnChancel.TabIndex = 4
-        Me.btnChancel.Text = "取消"
+        Me.btnChancel.Text = "清除"
         Me.btnChancel.UseVisualStyleBackColor = True
         '
         'SETH
         '
         Me.SETH.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.SETH.Location = New System.Drawing.Point(78, 118)
+        Me.SETH.MaxLength = 2
         Me.SETH.Name = "SETH"
         Me.SETH.Size = New System.Drawing.Size(66, 50)
         Me.SETH.TabIndex = 5
         Me.SETH.Text = "0"
-        Me.SETH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.SETH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'SETM
         '
         Me.SETM.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.SETM.Location = New System.Drawing.Point(167, 118)
+        Me.SETM.MaxLength = 2
         Me.SETM.Name = "SETM"
         Me.SETM.Size = New System.Drawing.Size(66, 50)
         Me.SETM.TabIndex = 5
         Me.SETM.Text = "0"
-        Me.SETM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.SETM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'SETS
         '
         Me.SETS.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.SETS.Location = New System.Drawing.Point(257, 118)
+        Me.SETS.MaxLength = 2
         Me.SETS.Name = "SETS"
         Me.SETS.Size = New System.Drawing.Size(66, 50)
         Me.SETS.TabIndex = 5
         Me.SETS.Text = "0"
-        Me.SETS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.SETS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GOH
         '
         Me.GOH.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.GOH.Location = New System.Drawing.Point(78, 207)
+        Me.GOH.MaxLength = 2
         Me.GOH.Name = "GOH"
         Me.GOH.Size = New System.Drawing.Size(66, 50)
         Me.GOH.TabIndex = 5
         Me.GOH.Text = "0"
-        Me.GOH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.GOH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GOM
         '
         Me.GOM.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.GOM.Location = New System.Drawing.Point(167, 207)
+        Me.GOM.MaxLength = 2
         Me.GOM.Name = "GOM"
         Me.GOM.Size = New System.Drawing.Size(66, 50)
         Me.GOM.TabIndex = 5
         Me.GOM.Text = "0"
-        Me.GOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.GOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GOS
         '
         Me.GOS.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.GOS.Location = New System.Drawing.Point(257, 207)
+        Me.GOS.MaxLength = 2
         Me.GOS.Name = "GOS"
         Me.GOS.Size = New System.Drawing.Size(66, 50)
         Me.GOS.TabIndex = 5
         Me.GOS.Text = "0"
-        Me.GOS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.GOS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label2.Location = New System.Drawing.Point(86, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 40)
@@ -163,6 +176,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label3.Location = New System.Drawing.Point(174, 68)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 40)
@@ -173,6 +187,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label4.Location = New System.Drawing.Point(262, 68)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 40)
@@ -223,6 +238,7 @@ Partial Class Form1
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Location = New System.Drawing.Point(1, 121)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(81, 40)
@@ -233,6 +249,7 @@ Partial Class Form1
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("微軟正黑體", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label10.Location = New System.Drawing.Point(1, 210)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(81, 40)
