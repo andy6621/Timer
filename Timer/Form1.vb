@@ -147,32 +147,36 @@
 
         S = (Integer.Parse(SETH.Text) * 60 * 60) + (Integer.Parse(SETM.Text) * 60) + Integer.Parse(SETS.Text)
         G = (Integer.Parse(GOH.Text) * 60 * 60) + (Integer.Parse(GOM.Text) * 60) + Integer.Parse(GOS.Text)
-        If G >= S Then
-            MsgBox("計時時間比設定時間長", vbCritical)
-        ElseIf Integer.Parse(SETH.Text) > 59 Then
-            MsgBox("時鐘設定錯誤>59", vbCritical)
+        'If G >= S Then
+        '    MsgBox("計時時間比設定時間長", vbCritical)
+        'Else
+        If Integer.Parse(SETH.Text) > 59 Then
+            MsgBox("時鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             'InputBox("時鐘設定錯誤>59", "", , Me.Location.X, Me.Location.Y) '但是InputBox可以调整位置
             SETH.Text = "59"
         ElseIf Integer.Parse(SETM.Text) > 59 Then
-            MsgBox("分鐘設定錯誤>59", vbCritical)
+            MsgBox("分鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             SETM.Text = "59"
         ElseIf Integer.Parse(SETS.Text) > 59 Then
-            MsgBox("秒鐘設定錯誤>59", vbCritical)
+            MsgBox("秒鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             SETS.Text = "59"
         ElseIf Integer.Parse(GOH.Text) > 59 Then
-            MsgBox("計時時鐘設定錯誤>59", vbCritical)
+            MsgBox("計時時鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             GOH.Text = "0"
         ElseIf Integer.Parse(GOM.Text) > 59 Then
-            MsgBox("計時分鐘設定錯誤>59", vbCritical)
+            MsgBox("計時分鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             GOM.Text = "0"
         ElseIf Integer.Parse(GOS.Text) > 59 Then
-            MsgBox("計時秒鐘設定錯誤>59", vbCritical)
+            MsgBox("計時秒鐘設定錯誤>59", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
             GOS.Text = "0"
         Else
             GOH.Text = "0" : GOM.Text = "0" : GOS.Text = "0"
             blnTimerWork = True
             btnChancel.Text = "停止"
-            btnChancel.BackColor = Color.Red
+            btnChancel.BackColor = Color.Yellow
+            Me.BackColor = Color.Red
+
+            '  Me.TopMost = True
         End If
 
     End Sub
@@ -186,8 +190,11 @@
             Timer2.Enabled = False
             btnChancel.Text = "清除"
             btnChancel.BackColor = Color.Empty
-            MsgBox("時間到了", vbCritical)
+            MsgBox("計時器，時間已經到了", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
 
+            btnChancel.BackColor = Color.Empty
+            Me.BackColor = Color.Empty
+            '  Me.TopMost = False
         Else
             GOS.Text = Integer.Parse(GOS.Text) + 1
 
@@ -203,13 +210,20 @@
 
             End If
 
-            If btnChancel.BackColor = Color.Red Then
-                btnChancel.BackColor = Color.Empty
+            'If btnChancel.BackColor = Color.Red Then
+            '    btnChancel.BackColor = Color.Empty
+            'Else
+            '    btnChancel.BackColor = Color.Red
+            'End If
+
+            If Me.BackColor = Color.Red Then
+                Me.BackColor = Color.Empty
             Else
-                btnChancel.BackColor = Color.Red
+                Me.BackColor = Color.Red
             End If
 
-            End If
+
+        End If
     End Sub
 
     Private Sub btnChancel_Click(sender As Object, e As EventArgs) Handles btnChancel.Click
@@ -218,10 +232,14 @@
             Timer2.Enabled = False
             btnChancel.Text = "清除"
             btnChancel.BackColor = Color.Empty
-            MsgBox("計時器已經取消", vbCritical)
+            MsgBox("計時器已經取消", vbCritical + MsgBoxStyle.MsgBoxSetForeground)
         Else
             GOH.Text = "0" : GOM.Text = "0" : GOS.Text = "0"
         End If
+
+        btnChancel.BackColor = Color.Empty
+        Me.BackColor = Color.Empty
+
     End Sub
 
     Private Sub SETH_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SETH.KeyPress
